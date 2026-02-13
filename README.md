@@ -1,53 +1,84 @@
-# Landing Page Gratuita (ATS + Portafolio) — Uso Masivo para Profesionales
+# Landing Page Gratuita — Template listo para GitHub Pages
 
-Una landing **minimalista, elegante y rápida** creada con **HTML + Tailwind (CDN)** para que cualquier profesional pueda publicar su perfil en minutos: **biografía, sobre mí, estudios, experiencia, proyectos y contacto**, incluyendo **botón flotante de WhatsApp**.
+Este repositorio incluye una **landing page gratuita** (HTML + Tailwind CDN) lista para desplegar en tu propio GitHub y **darte a conocer** en minutos.
 
-✅ **Uso masivo**: puedes usarla, editarla, duplicarla y compartirla libremente.  
-✅ **Sin build**: no requiere Node, Vite, Webpack ni dependencias.  
-✅ **Fácil de personalizar**: cambia texto, links, colores y listo.
-
----
-
-## Demo (Web)
-- Demo online: `https://TU-USUARIO.github.io/TU-REPO/`  
-- Carpeta principal: `index.html`
-
-> Si no tienes demo aún, publícalo con GitHub Pages (abajo está el paso a paso).
+✅ Incluye:
+- **Landing page** minimalista con secciones: Home, Sobre mí, Estudios, Experiencia y Contacto  
+- **CV modelo** diseñado para pasar filtros **ATS** (formato claro, limpio y escaneable)  
+- **Video explicativo** (guía) para modificar el template sin complicarte  
 
 ---
 
-## Qué incluye
-- `index.html` → Landing completa (secciones: Home, Sobre mí, Estudios, Experiencia, Proyectos, Contacto)
-- Botón flotante WhatsApp con ícono SVG “industria”
-- Microinteracciones (reveal on scroll, menú móvil, año automático)
-- Diseño limpio compatible con portafolio profesional
-- **Plantilla PDF** (para uso masivo) *(ver sección Plantilla PDF)*
-- **Guion / estructura para video** *(ver sección Video)*
+## 🚀 Demo (GitHub Pages)
+Cuando lo publiques, tu sitio quedará así:
+
+`https://TU_USUARIO.github.io/TU_REPO/`
 
 ---
 
-## Cómo usar (rápido)
-1. Descarga o clona el repo:
-   ```bash
-   git clone https://github.com/TU-USUARIO/TU-REPO.git
+## 📦 Qué trae este repo
+
+Estructura recomendada:
+
+```
+
+/
+├─ index.html
+├─ img2.jpg
+├─ cv.pdf
+└─ README.md
+
 ````
 
-2. Abre `index.html` con tu navegador (doble click)
-3. Edita lo mínimo:
-
-   * Nombre
-   * Biografía
-   * Email / teléfono
-   * Links de redes
-   * Mensaje de WhatsApp
+> Tu template ya viene apuntando a:
+- `img2.jpg` (foto)
+- `cv.pdf` (CV para descargar)
 
 ---
 
-## Personalización esencial
+## ✅ Cómo desplegarlo en tu GitHub (GitHub Pages)
 
-### 1) WhatsApp (número y mensaje)
+1. Crea un repo en GitHub (por ejemplo: `landing-page`)
+2. Sube estos archivos:
+   - `index.html` (este template)
+   - `img2.jpg` (tu foto)
+   - `cv.pdf` (tu CV ATS)
+3. Ve a: **Settings → Pages**
+4. En **Build and deployment**:
+   - Source: `Deploy from a branch`
+   - Branch: `main`
+   - Folder: `/ (root)`
+5. Guarda y abre la URL que te entrega GitHub Pages
 
-En el bloque JS del final del archivo:
+Listo: ya tienes tu landing online.
+
+---
+
+## ✏️ Cómo editar el template (rápido)
+
+### 1) Cambiar nombre, título y descripción SEO
+En `index.html`, edita:
+- `<title>...</title>`
+- `<meta name="description" ...>`
+
+### 2) Cambiar foto de perfil
+Reemplaza el archivo `img2.jpg` por tu foto (mismo nombre), o cambia el `src` aquí:
+
+```html
+<img src="img2.jpg" alt="Foto de perfil" />
+````
+
+### 3) Cambiar CV descargable
+
+Reemplaza el archivo `cv.pdf` por tu CV (mismo nombre), o cambia el link:
+
+```html
+<a href="cv.pdf" download>Descargar CV</a>
+```
+
+### 4) Cambiar WhatsApp (botón flotante)
+
+Edita este bloque al final:
 
 ```js
 const DATA = {
@@ -56,115 +87,56 @@ const DATA = {
 };
 ```
 
-### 2) Email / Teléfono / Ubicación
+### 5) Cambiar correo y teléfono
 
-Busca la sección `#contacto` y reemplaza:
+Busca estas líneas y reemplaza:
 
 * `mailto:contacto@ejemplo.com`
 * `tel:+56912345678`
-* `Santiago, Chile`
-
-### 3) CV PDF
-
-Reemplaza el link del botón:
-
-```html
-<a href="cv.pdf" download>Descargar CV</a>
-```
-
-Coloca tu PDF real en la raíz del repo con el nombre `cv.pdf`.
 
 ---
 
-## Publicar en GitHub Pages (gratis)
+## 📄 CV ATS (incluido)
 
-1. Sube el proyecto al repositorio
-2. Ve a: **Settings → Pages**
-3. En **Build and deployment**:
+Este repo incluye un **modelo de CV ATS-friendly** para que:
 
-   * Source: **Deploy from a branch**
-   * Branch: **main**
-   * Folder: **/(root)**
-4. Guarda y abre la URL que te entrega GitHub Pages
+* sea legible por parsers
+* mantenga una estructura estándar
+* evite columnas raras o diseños que rompan la lectura automática
 
----
-
-## Video (explicación)
-
-### Opción A: Link a video (recomendado)
-
-Agrega aquí tu link:
-
-* YouTube: `https://youtube.com/XXXXXXXX`
-* TikTok: `https://tiktok.com/@usuario/video/XXXXXXXX`
-
-### Opción B: Guion sugerido (60–90 segundos)
-
-1. “Hola, esta es una landing gratuita para profesionales.”
-2. “Incluye biografía, experiencia, estudios, proyectos y contacto.”
-3. “Se edita en 5 minutos, no necesita instalación.”
-4. “Tiene botón de WhatsApp y es ideal para usar en LinkedIn.”
-5. “La puedes publicar gratis con GitHub Pages.”
-6. “En el repo viene la plantilla PDF para replicarla en masa.”
+📌 Recomendación: mantén el CV en PDF con texto real (no escaneado).
 
 ---
 
-## Plantilla PDF (uso masivo)
+## 🎥 Video explicativo (cómo modificarlo)
 
-Este repo está pensado para acompañarse con una **plantilla PDF** que puedas entregar a otras personas o usar con clientes/equipos.
+Incluye un video/guía para que puedas:
 
-✅ Recomendación de estructura del PDF:
+* cambiar textos
+* reemplazar imagen y links
+* publicar en GitHub Pages
+* personalizar WhatsApp y contacto
 
-* Portada: “Landing Profesional Gratuita”
-* Qué es y para qué sirve
-* Cómo editar nombre, bio y contacto
-* Cómo activar GitHub Pages
-* Cómo cambiar foto, redes, WhatsApp
-* Checklist final (publicación y validación)
-
-📌 Ruta sugerida dentro del repo:
-
-* `assets/Plantilla-Landing-Gratuita.pdf`
-
-> Si aún no la tienes, crea ese PDF y súbelo a `assets/`.
+**Video:** `Pega aquí tu link`
 
 ---
 
-## Estructura del proyecto
+## 🧩 Tecnologías
 
-```txt
-.
-├─ index.html
-├─ cv.pdf                  # opcional (tu CV real)
-└─ assets/
-   └─ Plantilla-Landing-Gratuita.pdf
-```
+* HTML (archivo único)
+* Tailwind CSS (CDN)
+* Google Fonts (Great Vibes, Gilda Display, Montserrat)
+* JS Vanilla (menú móvil, reveal on scroll, WhatsApp, año automático)
 
 ---
 
-## Licencia / Uso
+## 📌 Licencia
 
-Puedes usar esta landing libremente para:
-
-* uso personal
-* uso comercial
-* uso educativo
-* distribución masiva
-
-Sugerencia ética: si la compartes, deja una referencia al repositorio original.
+Libre para usar, modificar y publicar en tu GitHub.
 
 ---
 
-## Soporte / Contacto
+## ⭐ Créditos
 
-Si quieres una versión personalizada (colores de marca, secciones extra, multi-idioma, versión React/Next, SEO avanzado):
-
-* Email: [contacto@ejemplo.com](mailto:contacto@ejemplo.com)
-* WhatsApp: (configurable en el proyecto)
-
----
-
-## Créditos
-
-Diseño minimalista, Tailwind CSS (CDN) y tipografías de Google Fonts.
-
+Hecho para que puedas tener una presencia profesional rápida y limpia:
+**Blandskron** — Portafolio / Landing minimalista.

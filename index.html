@@ -162,7 +162,7 @@
         <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <!-- Texto -->
           <div class="space-y-8 reveal">
-            <h1 class="font-script text-6xl md:text-7xl lg:text-8xl leading-tight">
+            <h1 class="font-script text-5xl md:text-6xl lg:text-7xl leading-tight">
               Bastian Landskron
             </h1>
 
@@ -185,16 +185,27 @@
 
             <!-- Acciones -->
             <div class="flex flex-wrap gap-3">
-              <a href="#contacto"
-                 class="press inline-flex items-center gap-2 rounded-full px-7 py-4 text-xs tracking-[0.22em] uppercase bg-black text-white hover:opacity-90 transition">
-                Contactar
-                <span aria-hidden="true" class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
-              </a>
-
               <!-- Botón CV -->
               <a href="cv.pdf" download
-                 class="press inline-flex items-center gap-2 rounded-full px-7 py-4 text-xs tracking-[0.22em] uppercase border hover:bg-black hover:text-white transition"
-                 style="border-color: var(--border);">
+                class="press inline-flex items-center gap-2 rounded-full px-7 py-4 text-xs tracking-[0.22em] uppercase border text-black hover:bg-black hover:text-white transition"
+                style="border-color: var(--border);">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="transition-colors duration-300"
+                    stroke="currentColor">
+                  <path d="M9 11.25V2.25"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                  <path d="M15.75 11.25V14.25C15.75 14.6478 15.592 15.0294 15.3107 15.3107C15.0294 15.592 14.6478 15.75 14.25 15.75H3.75C3.35218 15.75 2.97064 15.592 2.68934 15.3107C2.40804 15.0294 2.25 14.6478 2.25 14.25V11.25"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                  <path d="M5.25 7.5L9 11.25L12.75 7.5"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                </svg>
                 Descargar CV
               </a>
             </div>
@@ -207,22 +218,6 @@
               <span class="chip rounded-full px-4 py-2 text-xs" style="color: var(--muted);">Ciberseguridad</span>
               <span class="chip rounded-full px-4 py-2 text-xs" style="color: var(--muted);">Estrategia</span>
             </div>
-
-            <!-- Mini stats (ficticias) -->
-            <div class="grid grid-cols-3 gap-3 pt-4">
-              <div class="rounded-2xl border p-4 text-center" style="border-color: var(--border); background: rgba(255,255,255,.6);">
-                <p class="text-xs tracking-[0.22em] uppercase" style="color: var(--muted);">Proyectos</p>
-                <p class="font-serif text-2xl">60+</p>
-              </div>
-              <div class="rounded-2xl border p-4 text-center" style="border-color: var(--border); background: rgba(255,255,255,.6);">
-                <p class="text-xs tracking-[0.22em] uppercase" style="color: var(--muted);">Países</p>
-                <p class="font-serif text-2xl">6</p>
-              </div>
-              <div class="rounded-2xl border p-4 text-center" style="border-color: var(--border); background: rgba(255,255,255,.6);">
-                <p class="text-xs tracking-[0.22em] uppercase" style="color: var(--muted);">Años</p>
-                <p class="font-serif text-2xl">10+</p>
-              </div>
-            </div>
           </div>
 
           <!-- Foto -->
@@ -230,7 +225,7 @@
             <div class="relative w-[300px] h-[300px] md:w-[360px] md:h-[360px] rounded-full overflow-hidden"
                  style="box-shadow: var(--shadow); border: 1px solid var(--border);">
               <img
-                src="https://images.unsplash.com/photo-1629507208649-70919ca33793?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+                src="img2.jpg"
                 alt="Foto de perfil"
                 class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
@@ -266,26 +261,6 @@
               para enseñar conceptos complejos con ejemplos prácticos. Me gusta transformar ideas abstractas en productos utilizables.
             </p>
           </div>
-
-          <!-- Valores (ficticios) -->
-          <div class="grid md:grid-cols-3 gap-6 mt-12">
-            <div class="rounded-2xl border p-7 text-center hover-glow transition-all duration-300" style="border-color: var(--border); background: var(--card);">
-              <p class="text-xs tracking-[0.22em] uppercase font-semibold mb-2">Principio</p>
-              <p class="font-serif text-xl mb-2">Claridad</p>
-              <p class="text-sm" style="color: var(--muted);">Arquitectura entendible, documentación precisa y decisiones trazables.</p>
-            </div>
-            <div class="rounded-2xl border p-7 text-center hover-glow transition-all duration-300" style="border-color: var(--border); background: var(--card);">
-              <p class="text-xs tracking-[0.22em] uppercase font-semibold mb-2">Principio</p>
-              <p class="font-serif text-xl mb-2">Impacto</p>
-              <p class="text-sm" style="color: var(--muted);">Sistemas que mejoran métricas reales: costos, tiempos y calidad.</p>
-            </div>
-            <div class="rounded-2xl border p-7 text-center hover-glow transition-all duration-300" style="border-color: var(--border); background: var(--card);">
-              <p class="text-xs tracking-[0.22em] uppercase font-semibold mb-2">Principio</p>
-              <p class="font-serif text-xl mb-2">Evolución</p>
-              <p class="text-sm" style="color: var(--muted);">Infraestructura y código preparados para crecer sin “rehacer todo”.</p>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
@@ -302,64 +277,179 @@
 
           <div class="grid md:grid-cols-3 gap-6">
             <!-- Card 1 -->
-            <article class="rounded-2xl p-8 border transition-all duration-300 hover-glow"
-                     style="border-color: var(--border); background: var(--card);">
+            <article class="group rounded-2xl p-8 border transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+                    style="border-color: var(--border); background: var(--card);">
+
+              <!-- Icono Premium -->
               <div class="flex justify-center mb-6">
-                <div class="rounded-full p-4 transition-all duration-300"
-                     style="background: rgba(11,11,15,.06);">
-                  🎓
+                <div class="rounded-full p-4 transition-all duration-500 
+                            bg-black/5 text-black 
+                            group-hover:bg-black group-hover:text-white 
+                            group-hover:scale-110">
+
+                  <svg width="28" height="28" viewBox="0 0 32 32" fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke="currentColor"
+                      class="transition-all duration-500">
+                    
+                    <path d="M28.56 14.5626C28.7987 14.4573 29.0013 14.2843 29.1426 14.065C29.2839 13.8457 29.3578 13.5898 29.3551 13.3289C29.3524 13.0681 29.2732 12.8137 29.1274 12.5974C28.9816 12.3811 28.7755 12.2123 28.5347 12.1119L17.1067 6.90661C16.7593 6.74815 16.3819 6.66614 16 6.66614C15.6182 6.66614 15.2408 6.74815 14.8933 6.90661L3.46667 12.1066C3.2293 12.2106 3.02736 12.3815 2.88556 12.5984C2.74376 12.8153 2.66824 13.0688 2.66824 13.3279C2.66824 13.5871 2.74376 13.8406 2.88556 14.0575C3.02736 14.2744 3.2293 14.4453 3.46667 14.5493L14.8933 19.7599C15.2408 19.9184 15.6182 20.0004 16 20.0004C16.3819 20.0004 16.7593 19.9184 17.1067 19.7599L28.56 14.5626Z"
+                          stroke-width="2.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    
+                    <path d="M29.3333 13.3334V21.3334"
+                          stroke-width="2.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    
+                    <path d="M8 16.6666V21.3333C8 22.3942 8.84286 23.4116 10.3431 24.1617C11.8434 24.9119 13.8783 25.3333 16 25.3333C18.1217 25.3333 20.1566 24.9119 21.6569 24.1617C23.1571 23.4116 24 22.3942 24 21.3333V16.6666"
+                          stroke-width="2.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                  </svg>
+
                 </div>
               </div>
-              <h3 class="font-serif text-xl text-center mb-2">Arquitectura de Sistemas</h3>
-              <p class="text-center text-sm mb-1" style="color: var(--muted);">Universidad Técnica de Innovación</p>
-              <p class="text-center text-xs tracking-[0.18em] uppercase mb-5">2015 - 2019</p>
-              <p class="text-sm text-center leading-relaxed" style="color: var(--muted);">
+
+              <!-- Contenido -->
+              <h3 class="font-serif text-xl text-center mb-2 transition-colors duration-300 group-hover:text-black">
+                Arquitectura de Sistemas
+              </h3>
+
+              <p class="text-center text-sm mb-1" style="color: var(--muted);">
+                Universidad Técnica de Innovación
+              </p>
+
+              <p class="text-center text-xs tracking-[0.18em] uppercase mb-5" style="color: var(--muted);">
+                2015 - 2019
+              </p>
+
+              <p class="text-sm text-center leading-relaxed transition-colors duration-300"
+                style="color: var(--muted);">
                 Investigación en sistemas distribuidos, tolerancia a fallos y diseño de arquitecturas resilientes.
                 Proyecto final: plataforma de microservicios con alta disponibilidad y auditoría de eventos.
               </p>
+
             </article>
 
             <!-- Card 2 -->
-            <article class="rounded-2xl p-8 border transition-all duration-300 hover-glow"
-                     style="border-color: var(--border); background: var(--card);">
+            <article class="group rounded-2xl p-8 border transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+                    style="border-color: var(--border); background: var(--card);">
+
+              <!-- Icono Premium (MISMO SVG) -->
               <div class="flex justify-center mb-6">
-                <div class="rounded-full p-4" style="background: rgba(11,11,15,.06);">🧠</div>
+                <div class="rounded-full p-4 transition-all duration-500 
+                            bg-black/5 text-black 
+                            group-hover:bg-black group-hover:text-white 
+                            group-hover:scale-110">
+
+                  <svg width="28" height="28" viewBox="0 0 32 32" fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke="currentColor"
+                      class="transition-all duration-500">
+                    
+                    <path d="M28.56 14.5626C28.7987 14.4573 29.0013 14.2843 29.1426 14.065C29.2839 13.8457 29.3578 13.5898 29.3551 13.3289C29.3524 13.0681 29.2732 12.8137 29.1274 12.5974C28.9816 12.3811 28.7755 12.2123 28.5347 12.1119L17.1067 6.90661C16.7593 6.74815 16.3819 6.66614 16 6.66614C15.6182 6.66614 15.2408 6.74815 14.8933 6.90661L3.46667 12.1066C3.2293 12.2106 3.02736 12.3815 2.88556 12.5984C2.74376 12.8153 2.66824 13.0688 2.66824 13.3279C2.66824 13.5871 2.74376 13.8406 2.88556 14.0575C3.02736 14.2744 3.2293 14.4453 3.46667 14.5493L14.8933 19.7599C15.2408 19.9184 15.6182 20.0004 16 20.0004C16.3819 20.0004 16.7593 19.9184 17.1067 19.7599L28.56 14.5626Z"
+                          stroke-width="2.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    
+                    <path d="M29.3333 13.3334V21.3334"
+                          stroke-width="2.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    
+                    <path d="M8 16.6666V21.3333C8 22.3942 8.84286 23.4116 10.3431 24.1617C11.8434 24.9119 13.8783 25.3333 16 25.3333C18.1217 25.3333 20.1566 24.9119 21.6569 24.1617C23.1571 23.4116 24 22.3942 24 21.3333V16.6666"
+                          stroke-width="2.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                  </svg>
+
+                </div>
               </div>
-              <h3 class="font-serif text-xl text-center mb-2">Magíster en Ingeniería Digital</h3>
-              <p class="text-center text-sm mb-1" style="color: var(--muted);">Instituto Superior de Tecnología</p>
-              <p class="text-center text-xs tracking-[0.18em] uppercase mb-5">2019 - 2021</p>
-              <p class="text-sm text-center leading-relaxed" style="color: var(--muted);">
+
+              <!-- Contenido -->
+              <h3 class="font-serif text-xl text-center mb-2 transition-colors duration-300 group-hover:text-black">
+                Magíster en Ingeniería Digital
+              </h3>
+
+              <p class="text-center text-sm mb-1" style="color: var(--muted);">
+                Instituto Superior de Tecnología
+              </p>
+
+              <p class="text-center text-xs tracking-[0.18em] uppercase mb-5" style="color: var(--muted);">
+                2019 - 2021
+              </p>
+
+              <p class="text-sm text-center leading-relaxed transition-colors duration-300"
+                style="color: var(--muted);">
                 Enfoque en transformación digital, gestión de producto y gobierno de arquitectura.
                 Tesis ficticia: automatización inteligente para operaciones con KPIs y trazabilidad.
               </p>
+
             </article>
 
             <!-- Card 3 -->
-            <article class="rounded-2xl p-8 border transition-all duration-300 hover-glow"
-                     style="border-color: var(--border); background: var(--card);">
+            <article class="group rounded-2xl p-8 border transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+                    style="border-color: var(--border); background: var(--card);">
+
+              <!-- Icono Premium (MISMO SVG) -->
               <div class="flex justify-center mb-6">
-                <div class="rounded-full p-4" style="background: rgba(11,11,15,.06);">☁️</div>
+                <div class="rounded-full p-4 transition-all duration-500 
+                            bg-black/5 text-black 
+                            group-hover:bg-black group-hover:text-white 
+                            group-hover:scale-110">
+
+                  <svg width="28" height="28" viewBox="0 0 32 32" fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke="currentColor"
+                      class="transition-all duration-500">
+                    
+                    <path d="M28.56 14.5626C28.7987 14.4573 29.0013 14.2843 29.1426 14.065C29.2839 13.8457 29.3578 13.5898 29.3551 13.3289C29.3524 13.0681 29.2732 12.8137 29.1274 12.5974C28.9816 12.3811 28.7755 12.2123 28.5347 12.1119L17.1067 6.90661C16.7593 6.74815 16.3819 6.66614 16 6.66614C15.6182 6.66614 15.2408 6.74815 14.8933 6.90661L3.46667 12.1066C3.2293 12.2106 3.02736 12.3815 2.88556 12.5984C2.74376 12.8153 2.66824 13.0688 2.66824 13.3279C2.66824 13.5871 2.74376 13.8406 2.88556 14.0575C3.02736 14.2744 3.2293 14.4453 3.46667 14.5493L14.8933 19.7599C15.2408 19.9184 15.6182 20.0004 16 20.0004C16.3819 20.0004 16.7593 19.9184 17.1067 19.7599L28.56 14.5626Z"
+                          stroke-width="2.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    
+                    <path d="M29.3333 13.3334V21.3334"
+                          stroke-width="2.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    
+                    <path d="M8 16.6666V21.3333C8 22.3942 8.84286 23.4116 10.3431 24.1617C11.8434 24.9119 13.8783 25.3333 16 25.3333C18.1217 25.3333 20.1566 24.9119 21.6569 24.1617C23.1571 23.4116 24 22.3942 24 21.3333V16.6666"
+                          stroke-width="2.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                  </svg>
+
+                </div>
               </div>
-              <h3 class="font-serif text-xl text-center mb-2">Certificación Cloud &amp; DevOps</h3>
-              <p class="text-center text-sm mb-1" style="color: var(--muted);">Cloud Academy Program</p>
-              <p class="text-center text-xs tracking-[0.18em] uppercase mb-5">2021</p>
-              <p class="text-sm text-center leading-relaxed" style="color: var(--muted);">
+
+              <!-- Contenido -->
+              <h3 class="font-serif text-xl text-center mb-2 transition-colors duration-300 group-hover:text-black">
+                Certificación Cloud &amp; DevOps
+              </h3>
+
+              <p class="text-center text-sm mb-1" style="color: var(--muted);">
+                Cloud Academy Program
+              </p>
+
+              <p class="text-center text-xs tracking-[0.18em] uppercase mb-5" style="color: var(--muted);">
+                2021
+              </p>
+
+              <p class="text-sm text-center leading-relaxed transition-colors duration-300"
+                style="color: var(--muted);">
                 Infraestructura como código, CI/CD, observabilidad y despliegues multi-entorno.
                 Prácticas ficticias con entornos multi-región y políticas de seguridad.
               </p>
-            </article>
-          </div>
 
-          <!-- Línea extra (ficticia) -->
-          <div class="mt-10 text-center text-sm" style="color: var(--muted);">
-            + Formación continua en arquitectura limpia, ciberseguridad aplicada y prototipado de IA.
+            </article>
           </div>
         </div>
       </div>
     </section>
 
     <!-- =========================
-         EXPERIENCIA
+        EXPERIENCIA
     ========================== -->
     <section id="experiencia" class="px-5 py-16 md:py-24" style="background: linear-gradient(to bottom, rgba(11,11,15,.015), #fff);">
       <div class="mx-auto max-w-6xl">
@@ -369,176 +459,163 @@
           </h2>
 
           <div class="grid md:grid-cols-3 gap-6">
+
             <!-- Card 1 -->
-            <article class="rounded-2xl p-8 border bg-white transition-all duration-300 hover-glow"
-                     style="border-color: var(--border);">
+            <article class="group rounded-2xl p-8 border transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+                    style="border-color: var(--border); background: var(--card);">
+
               <div class="flex justify-center mb-6">
-                <div class="rounded-full p-4" style="background: rgba(11,11,15,.06);">💼</div>
+                <div class="rounded-full p-4 transition-all duration-500 
+                            bg-black/5 text-black 
+                            group-hover:bg-black group-hover:text-white 
+                            group-hover:scale-110">
+
+                  <svg width="28" height="28" viewBox="0 0 32 32" fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke="currentColor"
+                      class="transition-all duration-500">
+
+                    <path d="M21.3333 26.6667V5.33341C21.3333 4.62617 21.0524 3.94789 20.5523 3.4478C20.0522 2.9477 19.3739 2.66675 18.6667 2.66675H13.3333C12.6261 2.66675 11.9478 2.9477 11.4477 3.4478C10.9476 3.94789 10.6667 4.62617 10.6667 5.33341V26.6667"
+                          stroke-width="2.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+
+                    <path d="M26.6667 8H5.33334C3.86058 8 2.66667 9.19391 2.66667 10.6667V24C2.66667 25.4728 3.86058 26.6667 5.33334 26.6667H26.6667C28.1394 26.6667 29.3333 25.4728 29.3333 24V10.6667C29.3333 9.19391 28.1394 8 26.6667 8Z"
+                          stroke-width="2.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+
+                  </svg>
+
+                </div>
               </div>
-              <h3 class="font-serif text-xl text-center mb-2">Fundador &amp; CEO</h3>
-              <p class="text-center text-sm mb-1" style="color: var(--muted);">Blandskron SpA</p>
-              <p class="text-center text-xs tracking-[0.18em] uppercase mb-5">2020 - Presente</p>
+
+              <h3 class="font-serif text-xl text-center mb-2">
+                Fundador &amp; CEO
+              </h3>
+
+              <p class="text-center text-sm mb-1" style="color: var(--muted);">
+                Blandskron SpA
+              </p>
+
+              <p class="text-center text-xs tracking-[0.18em] uppercase mb-5" style="color: var(--muted);">
+                2020 - Presente
+              </p>
+
               <p class="text-sm text-center leading-relaxed" style="color: var(--muted);">
                 Dirección estratégica y arquitectura de soluciones para empresas tecnológicas.
                 Desarrollo de productos SaaS, laboratorios de ciberseguridad y automatización con IA.
                 Coordinación de equipos, stakeholders y entregas basadas en métricas.
               </p>
+
             </article>
 
             <!-- Card 2 -->
-            <article class="rounded-2xl p-8 border bg-white transition-all duration-300 hover-glow"
-                     style="border-color: var(--border);">
+            <article class="group rounded-2xl p-8 border transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+                    style="border-color: var(--border); background: var(--card);">
+
               <div class="flex justify-center mb-6">
-                <div class="rounded-full p-4" style="background: rgba(11,11,15,.06);">🧩</div>
+                <div class="rounded-full p-4 transition-all duration-500 
+                            bg-black/5 text-black 
+                            group-hover:bg-black group-hover:text-white 
+                            group-hover:scale-110">
+
+                  <svg width="28" height="28" viewBox="0 0 32 32" fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke="currentColor"
+                      class="transition-all duration-500">
+
+                    <path d="M21.3333 26.6667V5.33341C21.3333 4.62617 21.0524 3.94789 20.5523 3.4478C20.0522 2.9477 19.3739 2.66675 18.6667 2.66675H13.3333C12.6261 2.66675 11.9478 2.9477 11.4477 3.4478C10.9476 3.94789 10.6667 4.62617 10.6667 5.33341V26.6667"
+                          stroke-width="2.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+
+                    <path d="M26.6667 8H5.33334C3.86058 8 2.66667 9.19391 2.66667 10.6667V24C2.66667 25.4728 3.86058 26.6667 5.33334 26.6667H26.6667C28.1394 26.6667 29.3333 25.4728 29.3333 24V10.6667C29.3333 9.19391 28.1394 8 26.6667 8Z"
+                          stroke-width="2.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+
+                  </svg>
+
+                </div>
               </div>
-              <h3 class="font-serif text-xl text-center mb-2">Arquitecto de Software Senior</h3>
-              <p class="text-center text-sm mb-1" style="color: var(--muted);">Tech Solutions Inc.</p>
-              <p class="text-center text-xs tracking-[0.18em] uppercase mb-5">2018 - 2020</p>
+
+              <h3 class="font-serif text-xl text-center mb-2">
+                Arquitecto de Software Senior
+              </h3>
+
+              <p class="text-center text-sm mb-1" style="color: var(--muted);">
+                Tech Solutions Inc.
+              </p>
+
+              <p class="text-center text-xs tracking-[0.18em] uppercase mb-5" style="color: var(--muted);">
+                2018 - 2020
+              </p>
+
               <p class="text-sm text-center leading-relaxed" style="color: var(--muted);">
                 Diseño e implementación de sistemas empresariales de misión crítica.
                 Optimización de rendimiento, integración de APIs y estandarización de prácticas internas.
                 Mentoría técnica y revisión de calidad (arquitectura, seguridad y mantenibilidad).
               </p>
+
             </article>
 
             <!-- Card 3 -->
-            <article class="rounded-2xl p-8 border bg-white transition-all duration-300 hover-glow"
-                     style="border-color: var(--border);">
+            <article class="group rounded-2xl p-8 border transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+                    style="border-color: var(--border); background: var(--card);">
+
               <div class="flex justify-center mb-6">
-                <div class="rounded-full p-4" style="background: rgba(11,11,15,.06);">🧑‍💻</div>
+                <div class="rounded-full p-4 transition-all duration-500 
+                            bg-black/5 text-black 
+                            group-hover:bg-black group-hover:text-white 
+                            group-hover:scale-110">
+
+                  <svg width="28" height="28" viewBox="0 0 32 32" fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke="currentColor"
+                      class="transition-all duration-500">
+
+                    <path d="M21.3333 26.6667V5.33341C21.3333 4.62617 21.0524 3.94789 20.5523 3.4478C20.0522 2.9477 19.3739 2.66675 18.6667 2.66675H13.3333C12.6261 2.66675 11.9478 2.9477 11.4477 3.4478C10.9476 3.94789 10.6667 4.62617 10.6667 5.33341V26.6667"
+                          stroke-width="2.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+
+                    <path d="M26.6667 8H5.33334C3.86058 8 2.66667 9.19391 2.66667 10.6667V24C2.66667 25.4728 3.86058 26.6667 5.33334 26.6667H26.6667C28.1394 26.6667 29.3333 25.4728 29.3333 24V10.6667C29.3333 9.19391 28.1394 8 26.6667 8Z"
+                          stroke-width="2.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+
+                  </svg>
+
+                </div>
               </div>
-              <h3 class="font-serif text-xl text-center mb-2">Desarrollador Full Stack</h3>
-              <p class="text-center text-sm mb-1" style="color: var(--muted);">Digital Ventures</p>
-              <p class="text-center text-xs tracking-[0.18em] uppercase mb-5">2016 - 2018</p>
+
+              <h3 class="font-serif text-xl text-center mb-2">
+                Desarrollador Full Stack
+              </h3>
+
+              <p class="text-center text-sm mb-1" style="color: var(--muted);">
+                Digital Ventures
+              </p>
+
+              <p class="text-center text-xs tracking-[0.18em] uppercase mb-5" style="color: var(--muted);">
+                2016 - 2018
+              </p>
+
               <p class="text-sm text-center leading-relaxed" style="color: var(--muted);">
                 Desarrollo web y móvil, implementación de APIs REST y automatización de procesos.
                 Participación en releases continuos, diseño de interfaces y mantenimiento de plataformas.
               </p>
+
             </article>
-          </div>
 
-          <!-- Logros ficticios -->
-          <div class="mt-12 grid md:grid-cols-3 gap-6">
-            <div class="rounded-2xl border p-7" style="border-color: var(--border); background: var(--card);">
-              <p class="text-xs tracking-[0.22em] uppercase font-semibold mb-2">Logro</p>
-              <p class="font-serif text-xl mb-2">Escalabilidad</p>
-              <p class="text-sm" style="color: var(--muted);">Migración ficticia a microservicios con reducción de incidentes operativos.</p>
-            </div>
-            <div class="rounded-2xl border p-7" style="border-color: var(--border); background: var(--card);">
-              <p class="text-xs tracking-[0.22em] uppercase font-semibold mb-2">Logro</p>
-              <p class="font-serif text-xl mb-2">Automatización</p>
-              <p class="text-sm" style="color: var(--muted);">Pipelines CI/CD con entregas más rápidas y validación automatizada.</p>
-            </div>
-            <div class="rounded-2xl border p-7" style="border-color: var(--border); background: var(--card);">
-              <p class="text-xs tracking-[0.22em] uppercase font-semibold mb-2">Logro</p>
-              <p class="font-serif text-xl mb-2">Seguridad</p>
-              <p class="text-sm" style="color: var(--muted);">Laboratorios y controles preventivos con enfoque en OWASP y auditoría.</p>
-            </div>
           </div>
-
         </div>
       </div>
     </section>
 
     <!-- =========================
-         PROYECTOS (FICTICIOS)
-    ========================== -->
-    <section id="proyectos" class="px-5 py-16 md:py-24">
-      <div class="mx-auto max-w-6xl">
-        <div class="reveal">
-          <h2 class="font-serif text-4xl md:text-5xl text-center mb-12">
-            Proyectos Destacados
-          </h2>
-
-          <div class="grid md:grid-cols-3 gap-6">
-            <article class="rounded-2xl p-8 border transition-all duration-300 hover-glow"
-                     style="border-color: var(--border); background: var(--card);">
-              <div class="flex items-center justify-between mb-4">
-                <span class="chip rounded-full px-3 py-1 text-[11px]" style="color: var(--muted);">IA Experimental</span>
-                <span class="text-xs tracking-[0.18em] uppercase" style="color: var(--muted);">2024</span>
-              </div>
-              <h3 class="font-serif text-xl mb-3">Origen AI</h3>
-              <p class="text-sm leading-relaxed" style="color: var(--muted);">
-                Modelo ligero de lenguaje para investigación independiente. Enfoque en optimización simbólica,
-                compresión y respuestas coherentes sin infraestructura compleja.
-              </p>
-            </article>
-
-            <article class="rounded-2xl p-8 border transition-all duration-300 hover-glow"
-                     style="border-color: var(--border); background: var(--card);">
-              <div class="flex items-center justify-between mb-4">
-                <span class="chip rounded-full px-3 py-1 text-[11px]" style="color: var(--muted);">Ciberseguridad</span>
-                <span class="text-xs tracking-[0.18em] uppercase" style="color: var(--muted);">2025</span>
-              </div>
-              <h3 class="font-serif text-xl mb-3">DefensaPyme</h3>
-              <p class="text-sm leading-relaxed" style="color: var(--muted);">
-                Plataforma SaaS para análisis básico de vulnerabilidades y reportes ejecutivos para organizaciones.
-                Incluye laboratorios, registros y simulaciones controladas.
-              </p>
-            </article>
-
-            <article class="rounded-2xl p-8 border transition-all duration-300 hover-glow"
-                     style="border-color: var(--border); background: var(--card);">
-              <div class="flex items-center justify-between mb-4">
-                <span class="chip rounded-full px-3 py-1 text-[11px]" style="color: var(--muted);">ERP Modular</span>
-                <span class="text-xs tracking-[0.18em] uppercase" style="color: var(--muted);">2023</span>
-              </div>
-              <h3 class="font-serif text-xl mb-3">NovaPOS</h3>
-              <p class="text-sm leading-relaxed" style="color: var(--muted);">
-                Ecosistema de punto de venta modular con enfoque en integraciones, inventario, auditoría y multi-sucursal.
-                Arquitectura preparada para crecimiento por módulos.
-              </p>
-            </article>
-
-            <article class="rounded-2xl p-8 border transition-all duration-300 hover-glow"
-                     style="border-color: var(--border); background: var(--card);">
-              <div class="flex items-center justify-between mb-4">
-                <span class="chip rounded-full px-3 py-1 text-[11px]" style="color: var(--muted);">Educación</span>
-                <span class="text-xs tracking-[0.18em] uppercase" style="color: var(--muted);">2022</span>
-              </div>
-              <h3 class="font-serif text-xl mb-3">Loop STEAM</h3>
-              <p class="text-sm leading-relaxed" style="color: var(--muted);">
-                Plataforma de cursos y tutor IA para aprendizaje guiado. Contenido por rutas y ejercicios con feedback.
-                Diseñada para avanzar rápido sin perder fundamentos.
-              </p>
-            </article>
-
-            <article class="rounded-2xl p-8 border transition-all duration-300 hover-glow"
-                     style="border-color: var(--border); background: var(--card);">
-              <div class="flex items-center justify-between mb-4">
-                <span class="chip rounded-full px-3 py-1 text-[11px]" style="color: var(--muted);">Infra &amp; DevOps</span>
-                <span class="text-xs tracking-[0.18em] uppercase" style="color: var(--muted);">2021</span>
-              </div>
-              <h3 class="font-serif text-xl mb-3">ObservaStack</h3>
-              <p class="text-sm leading-relaxed" style="color: var(--muted);">
-                Stack de observabilidad ficticio para métricas, logs y alertas. Dashboards, trazabilidad y monitoreo
-                de servicios críticos.
-              </p>
-            </article>
-
-            <article class="rounded-2xl p-8 border transition-all duration-300 hover-glow"
-                     style="border-color: var(--border); background: var(--card);">
-              <div class="flex items-center justify-between mb-4">
-                <span class="chip rounded-full px-3 py-1 text-[11px]" style="color: var(--muted);">I+D</span>
-                <span class="text-xs tracking-[0.18em] uppercase" style="color: var(--muted);">2020</span>
-              </div>
-              <h3 class="font-serif text-xl mb-3">Atlas Framework</h3>
-              <p class="text-sm leading-relaxed" style="color: var(--muted);">
-                Conjunto de guías y plantillas para arquitectura limpia, consistencia de APIs, documentación y estándares
-                de calidad en equipos.
-              </p>
-            </article>
-          </div>
-
-          <p class="text-center mt-10 text-sm" style="color: var(--muted);">
-            *Todos los proyectos descritos aquí son ficticios y se presentan como ejemplo de portafolio.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================
-         CONTACTO
+        CONTACTO
     ========================== -->
     <section id="contacto" class="px-5 py-16 md:py-24">
       <div class="mx-auto max-w-4xl">
@@ -553,49 +630,92 @@
           </p>
 
           <div class="grid md:grid-cols-3 gap-6">
+
             <!-- Email -->
-            <div class="rounded-2xl p-8 border text-center transition-all duration-300 hover-glow"
-                 style="border-color: var(--border); background: var(--card);">
+            <div class="group rounded-2xl p-8 border text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+                style="border-color: var(--border); background: var(--card);">
               <div class="inline-flex justify-center mb-5">
-                <div class="rounded-full p-5 transition-all duration-300"
-                     style="background: rgba(11,11,15,.06);">
-                  ✉️
+                <div class="rounded-full p-5 transition-all duration-500 
+                            bg-black/5 text-black 
+                            group-hover:bg-black group-hover:text-white 
+                            group-hover:scale-110">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke="currentColor"
+                      class="transition-all duration-500">
+                    <path d="M25.6667 8.16675L15.1772 14.8482C14.8212 15.055 14.4169 15.1639 14.0052 15.1639C13.5936 15.1639 13.1893 15.055 12.8333 14.8482L2.33333 8.16675"
+                          stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M23.3333 4.66675H4.66666C3.378 4.66675 2.33333 5.71142 2.33333 7.00008V21.0001C2.33333 22.2887 3.378 23.3334 4.66666 23.3334H23.3333C24.622 23.3334 25.6667 22.2887 25.6667 21.0001V7.00008C25.6667 5.71142 24.622 4.66675 23.3333 4.66675Z"
+                          stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
                 </div>
               </div>
+
               <p class="text-xs tracking-[0.22em] uppercase mb-2 font-semibold">Email</p>
-              <a class="text-sm hover:opacity-70 transition" href="mailto:contacto@ejemplo.com" style="color: var(--muted);">
+              <a class="text-sm transition hover:opacity-70"
+                href="mailto:contacto@ejemplo.com"
+                style="color: var(--muted);">
                 contacto@ejemplo.com
               </a>
             </div>
 
             <!-- Teléfono -->
-            <div class="rounded-2xl p-8 border text-center transition-all duration-300 hover-glow"
-                 style="border-color: var(--border); background: var(--card);">
+            <div class="group rounded-2xl p-8 border text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+                style="border-color: var(--border); background: var(--card);">
               <div class="inline-flex justify-center mb-5">
-                <div class="rounded-full p-5" style="background: rgba(11,11,15,.06);">📞</div>
+                <div class="rounded-full p-5 transition-all duration-500 
+                            bg-black/5 text-black 
+                            group-hover:bg-black group-hover:text-white 
+                            group-hover:scale-110">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke="currentColor"
+                      class="transition-all duration-500">
+                    <path d="M16.1373 19.3293C16.3783 19.4399 16.6497 19.4652 16.907 19.4009C17.1642 19.3367 17.3919 19.1867 17.5525 18.9758L17.9666 18.4333C18.184 18.1435 18.4658 17.9083 18.7898 17.7463C19.1138 17.5843 19.4711 17.4999 19.8333 17.4999H23.3333C23.9522 17.4999 24.5456 17.7458 24.9832 18.1833C25.4208 18.6209 25.6666 19.2144 25.6666 19.8333V23.3333C25.6666 23.9521 25.4208 24.5456 24.9832 24.9832C24.5456 25.4208 23.9522 25.6666 23.3333 25.6666C17.7638 25.6666 12.4223 23.4541 8.48407 19.5158C4.54581 15.5776 2.33331 10.2361 2.33331 4.66659C2.33331 4.04775 2.57915 3.45425 3.01673 3.01667C3.45432 2.57908 4.04781 2.33325 4.66665 2.33325H8.16665C8.78548 2.33325 9.37898 2.57908 9.81656 3.01667C10.2541 3.45425 10.5 4.04775 10.5 4.66659V8.16659C10.5 8.52882 10.4156 8.88609 10.2536 9.21008C10.0916 9.53408 9.85644 9.81591 9.56665 10.0333L9.02065 10.4428C8.80647 10.6063 8.6555 10.8389 8.5934 11.1012C8.5313 11.3634 8.56189 11.639 8.67998 11.8813C10.2744 15.1198 12.8968 17.7388 16.1373 19.3293Z"
+                          stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
               </div>
+
               <p class="text-xs tracking-[0.22em] uppercase mb-2 font-semibold">Teléfono</p>
-              <a class="text-sm hover:opacity-70 transition" href="tel:+56912345678" style="color: var(--muted);">
+              <a class="text-sm transition hover:opacity-70"
+                href="tel:+56912345678"
+                style="color: var(--muted);">
                 +56 9 1234 5678
               </a>
             </div>
 
             <!-- Ubicación -->
-            <div class="rounded-2xl p-8 border text-center transition-all duration-300 hover-glow"
-                 style="border-color: var(--border); background: var(--card);">
+            <div class="group rounded-2xl p-8 border text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+                style="border-color: var(--border); background: var(--card);">
               <div class="inline-flex justify-center mb-5">
-                <div class="rounded-full p-5" style="background: rgba(11,11,15,.06);">📍</div>
+                <div class="rounded-full p-5 transition-all duration-500 
+                            bg-black/5 text-black 
+                            group-hover:bg-black group-hover:text-white 
+                            group-hover:scale-110">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke="currentColor"
+                      class="transition-all duration-500">
+                    <path d="M23.3334 11.6666C23.3334 17.4918 16.8712 23.5584 14.7012 25.4321C14.499 25.5841 14.253 25.6663 14 25.6663C13.7471 25.6663 13.501 25.5841 13.2989 25.4321C11.1289 23.5584 4.66669 17.4918 4.66669 11.6666C4.66669 9.19123 5.65002 6.81726 7.40036 5.06692C9.1507 3.31658 11.5247 2.33325 14 2.33325C16.4754 2.33325 18.8493 3.31658 20.5997 5.06692C22.35 6.81726 23.3334 9.19123 23.3334 11.6666Z"
+                          stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 15.1667C15.933 15.1667 17.5 13.5997 17.5 11.6667C17.5 9.73375 15.933 8.16675 14 8.16675C12.067 8.16675 10.5 9.73375 10.5 11.6667C10.5 13.5997 12.067 15.1667 14 15.1667Z"
+                          stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
               </div>
+
               <p class="text-xs tracking-[0.22em] uppercase mb-2 font-semibold">Ubicación</p>
               <p class="text-sm" style="color: var(--muted);">Santiago, Chile</p>
             </div>
+
           </div>
 
-          <!-- CTA final (ficticio) -->
+          <!-- CTA final -->
           <div class="mt-10 text-center">
             <a href="#home"
-               class="press inline-flex items-center gap-2 rounded-full px-7 py-4 text-xs tracking-[0.22em] uppercase border hover:bg-black hover:text-white transition"
-               style="border-color: var(--border);">
+              class="press inline-flex items-center gap-2 rounded-full px-7 py-4 text-xs tracking-[0.22em] uppercase border hover:bg-black hover:text-white transition"
+              style="border-color: var(--border);">
               Volver arriba
               <span aria-hidden="true">↑</span>
             </a>
@@ -608,11 +728,12 @@
   </main>
 
   <!-- =========================
-       FOOTER
+      FOOTER
   ========================== -->
   <footer class="mt-10">
     <div class="bg-black text-white">
       <div class="mx-auto max-w-6xl px-5 py-14">
+
         <div class="grid md:grid-cols-3 gap-10 mb-10">
           <!-- Col 1 -->
           <div>
@@ -639,37 +760,94 @@
           <!-- Col 3 -->
           <div>
             <h4 class="font-serif text-xl mb-4">Sígueme</h4>
-            <div class="flex gap-3">
-              <a class="press rounded-full px-4 py-3 bg-white/10 hover:bg-white hover:text-black transition"
-                 href="https://linkedin.com" target="_blank" rel="noopener noreferrer">in</a>
-              <a class="press rounded-full px-4 py-3 bg-white/10 hover:bg-white hover:text-black transition"
-                 href="https://github.com" target="_blank" rel="noopener noreferrer">gh</a>
-              <a class="press rounded-full px-4 py-3 bg-white/10 hover:bg-white hover:text-black transition"
-                 href="https://twitter.com" target="_blank" rel="noopener noreferrer">x</a>
-            </div>
 
-            <p class="mt-4 text-xs text-white/40 leading-relaxed">
-              *Contenido ficticio para demostración / regalo.
-            </p>
+            <div class="flex gap-3">
+              <!-- LinkedIn -->
+              <a class="group press inline-flex items-center justify-center rounded-full w-11 h-11
+                        bg-white/10 text-white border border-white/10
+                        transition-all duration-300 hover:bg-white hover:text-black hover:-translate-y-0.5 hover:shadow-xl"
+                href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M13.3333 6.66675C14.6594 6.66675 15.9312 7.19353 16.8688 8.13121C17.8065 9.0689 18.3333 10.3407 18.3333 11.6667V17.5001H15V11.6667C15 11.2247 14.8244 10.8008 14.5118 10.4882C14.1993 10.1757 13.7753 10.0001 13.3333 10.0001C12.8913 10.0001 12.4674 10.1757 12.1548 10.4882C11.8422 10.8008 11.6666 11.2247 11.6666 11.6667V17.5001H8.33331V11.6667C8.33331 10.3407 8.8601 9.0689 9.79778 8.13121C10.7355 7.19353 12.0072 6.66675 13.3333 6.66675Z"
+                        stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M5.00002 7.5H1.66669V17.5H5.00002V7.5Z"
+                        stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3.33335 5.00008C4.25383 5.00008 5.00002 4.25389 5.00002 3.33341C5.00002 2.41294 4.25383 1.66675 3.33335 1.66675C2.41288 1.66675 1.66669 2.41294 1.66669 3.33341C1.66669 4.25389 2.41288 5.00008 3.33335 5.00008Z"
+                        stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+
+              <!-- GitHub -->
+              <a class="group press inline-flex items-center justify-center rounded-full w-11 h-11
+                        bg-white/10 text-white border border-white/10
+                        transition-all duration-300 hover:bg-white hover:text-black hover:-translate-y-0.5 hover:shadow-xl"
+                href="https://github.com" target="_blank" rel="noopener noreferrer"
+                aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M12.5 18.3334V15.0001C12.6159 13.9562 12.3166 12.9085 11.6667 12.0834C14.1667 12.0834 16.6667 10.4167 16.6667 7.50008C16.7333 6.45841 16.4417 5.43341 15.8333 4.58341C16.0667 3.62508 16.0667 2.62508 15.8333 1.66675C15.8333 1.66675 15 1.66675 13.3333 2.91675C11.1333 2.50008 8.86666 2.50008 6.66666 2.91675C4.99999 1.66675 4.16666 1.66675 4.16666 1.66675C3.91666 2.62508 3.91666 3.62508 4.16666 4.58341C3.55988 5.42998 3.26538 6.46074 3.33332 7.50008C3.33332 10.4167 5.83332 12.0834 8.33332 12.0834C8.00832 12.4917 7.76666 12.9584 7.62499 13.4584C7.48332 13.9584 7.44166 14.4834 7.49999 15.0001V18.3334"
+                        stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M7.50002 14.9999C3.74169 16.6666 3.33335 13.3333 1.66669 13.3333"
+                        stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+
+              <!-- Instagram -->
+              <a class="group press inline-flex items-center justify-center rounded-full w-11 h-11
+                        bg-white/10 text-white border border-white/10
+                        transition-all duration-300 hover:bg-white hover:text-black hover:-translate-y-0.5 hover:shadow-xl"
+                href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M7.46494 1.066C8.63828 1.01222 9.01228 1 12 1C14.9883 1 15.3617 1.01283 16.5344 1.066C17.7059 1.11917 18.5059 1.30556 19.2056 1.5775C19.9395 1.85381 20.6043 2.28674 21.1538 2.84617C21.7133 3.3956 22.1463 4.06046 22.4225 4.79439C22.6944 5.49411 22.8802 6.29406 22.934 7.46494C22.9878 8.63828 23 9.01228 23 12C23 14.9877 22.9872 15.3617 22.934 16.5351C22.8808 17.7059 22.6944 18.5059 22.4225 19.2056C22.1414 19.9286 21.7649 20.5427 21.1538 21.1538C20.6044 21.7133 19.9395 22.1463 19.2056 22.4225C18.5059 22.6944 17.7059 22.8802 16.5351 22.934C15.3617 22.9878 14.9877 23 12 23C9.01228 23 8.63828 22.9872 7.46494 22.934C6.29406 22.8808 5.49411 22.6944 4.79439 22.4225C4.07144 22.1414 3.45728 21.7649 2.84617 21.1538C2.28664 20.6044 1.85368 19.9395 1.5775 19.2056C1.30556 18.5059 1.11978 17.7059 1.066 16.5351C1.01222 15.3617 1 14.9883 1 12C1 9.01167 1.01283 8.63828 1.066 7.46556C1.11917 6.29406 1.30556 5.49411 1.5775 4.79439C1.85381 4.06051 2.28674 3.39568 2.84617 2.84617C3.39559 2.28664 4.06045 1.85368 4.79439 1.5775C5.49411 1.30556 6.29406 1.11978 7.46494 1.066ZM16.4452 3.046C15.2853 2.99344 14.937 2.98183 12 2.98183C9.063 2.98183 8.71467 2.99344 7.55478 3.046C6.48228 3.09489 5.89989 3.27394 5.51244 3.42489C4.99911 3.62411 4.63244 3.86244 4.24744 4.24744C3.86306 4.63244 3.62411 4.99911 3.42489 5.51244C3.27394 5.89989 3.09489 6.48228 3.046 7.55478C2.99344 8.71467 2.98183 9.063 2.98183 12C2.98183 14.937 2.99344 15.2853 3.046 16.4452C3.09489 17.5177 3.27394 18.1001 3.42489 18.4876C3.60111 18.9654 3.88219 19.3976 4.24744 19.7526C4.60234 20.1178 5.03461 20.3989 5.51244 20.5751C5.89989 20.7261 6.48228 20.9051 7.55478 20.954C8.71467 21.0066 9.06239 21.0182 12 21.0182C14.9376 21.0182 15.2853 21.0066 16.4452 20.954C17.5177 20.9051 18.1001 20.7261 18.4876 20.5751C19.0009 20.3759 19.3676 20.1376 19.7526 19.7526C20.1178 19.3977 20.3989 18.9654 20.5751 18.4876C20.7261 18.1001 20.9051 17.5177 20.954 16.4452C21.0066 15.2853 21.0182 14.937 21.0182 12C21.0182 9.063 21.0066 8.71467 20.954 7.55478C20.9051 6.48228 20.7261 5.89989 20.5751 5.51244C20.3759 4.99911 20.1376 4.63244 19.7526 4.24744C19.3676 3.86306 19.0009 3.62411 18.4876 3.42489C18.1001 3.27394 17.5177 3.09489 16.4452 3.046ZM10.5955 15.3909C11.0408 15.5754 11.518 15.6703 12 15.6703C12.9735 15.6703 13.907 15.2836 14.5953 14.5953C15.2837 13.907 15.6704 12.9734 15.6704 12C15.6704 11.0266 15.2837 10.093 14.5953 9.40468C13.907 8.71636 12.9735 8.32966 12 8.32966C11.518 8.32966 11.0408 8.4246 10.5955 8.60905C10.1501 8.7935 9.74553 9.06385 9.40471 9.40468C9.06389 9.7455 8.79353 10.1501 8.60908 10.5954C8.42463 11.0407 8.3297 11.518 8.3297 12C8.3297 12.482 8.42463 12.9593 8.60908 13.4046C8.79353 13.8499 9.06389 14.2545 9.40471 14.5953C9.74553 14.9361 10.1501 15.2065 10.5955 15.3909ZM8.00205 8.00201C9.06238 6.94168 10.5005 6.34599 12 6.34599C13.4996 6.34599 14.9377 6.94168 15.998 8.00201C17.0583 9.06234 17.654 10.5005 17.654 12C17.654 13.4995 17.0583 14.9376 15.998 15.998C14.9377 17.0583 13.4996 17.654 12 17.654C10.5005 17.654 9.06238 17.0583 8.00205 15.998C6.94172 14.9376 6.34603 13.4995 6.34603 12C6.34603 10.5005 6.94172 9.06234 8.00205 8.00201ZM18.9077 7.18838C19.1583 6.93773 19.2991 6.59779 19.2991 6.24333C19.2991 5.88886 19.1583 5.54892 18.9077 5.29828C18.657 5.04764 18.3171 4.90683 17.9626 4.90683C17.6082 4.90683 17.2682 5.04764 17.0176 5.29828C16.7669 5.54892 16.6261 5.88886 16.6261 6.24333C16.6261 6.59779 16.7669 6.93773 17.0176 7.18838C17.2682 7.43902 17.6082 7.57983 17.9626 7.57983C18.3171 7.57983 18.657 7.43902 18.9077 7.18838Z"
+                        fill="currentColor"/>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
 
         <div class="border-t border-white/10 pt-6 text-center text-sm text-white/60">
-          <span id="year"></span> © Bastian Landskron. Hecho con ♥
+          <span id="year"></span> © Blandskron. Hecho con
+          <span class="inline-block align-[-2px] mx-1">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_0_212)">
+                <path d="M1.16669 5.54149C1.1667 4.89235 1.36362 4.25849 1.73143 3.72362C2.09925 3.18875 2.62066 2.77804 3.22679 2.54572C3.83293 2.3134 4.49528 2.27041 5.12636 2.42243C5.75744 2.57445 6.32757 2.91432 6.76144 3.39715C6.792 3.42983 6.82894 3.45588 6.86998 3.47369C6.91102 3.4915 6.95528 3.50069 7.00002 3.50069C7.04476 3.50069 7.08902 3.4915 7.13006 3.47369C7.1711 3.45588 7.20805 3.42983 7.2386 3.39715C7.67111 2.91118 8.24137 2.56845 8.87347 2.41459C9.50558 2.26072 10.1696 2.30302 10.777 2.53585C11.3845 2.76868 11.9067 3.181 12.274 3.71793C12.6413 4.25486 12.8365 4.89093 12.8334 5.54149C12.8334 6.87732 11.9584 7.87482 11.0834 8.74982L7.87969 11.8491C7.77099 11.9739 7.63698 12.0742 7.48655 12.1432C7.33612 12.2123 7.17271 12.2486 7.00719 12.2496C6.84167 12.2507 6.67781 12.2165 6.52652 12.1493C6.37523 12.0822 6.23995 11.9836 6.12969 11.8602L2.91669 8.74982C2.04169 7.87482 1.16669 6.88315 1.16669 5.54149Z"
+                      fill="#FB2C36" stroke="#FB2C36" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_0_212">
+                  <rect width="14" height="14" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
         </div>
+
       </div>
     </div>
   </footer>
 
   <!-- =========================
-       WHATSAPP FLOATING BUTTON
+      WHATSAPP FLOATING BUTTON
   ========================== -->
   <div class="fixed bottom-6 right-6 z-50 tooltip-wrap">
     <a id="waBtn"
-       href="#"
-       class="press inline-flex items-center justify-center w-14 h-14 rounded-full shadow-2xl"
-       style="background:#25D366;">
-      <span class="text-white text-2xl" aria-hidden="true">💬</span>
+      href="#"
+      class="press inline-flex items-center justify-center w-14 h-14 rounded-full shadow-2xl transition-transform duration-300 hover:-translate-y-1"
+      style="background:#25D366;">
+      
+      <!-- WhatsApp Official SVG -->
+      <svg width="26" height="26" viewBox="0 0 34 34" fill="none"
+          xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M28.237 5.69839C25.3789 2.84027 21.4307 1.07227 17.0691 1.07227C8.34703 1.07227 1.27502 8.1432 1.27502 16.8663C1.27502 19.7691 2.05809 22.488 3.4234 24.8255L3.38302 24.7511L1.14221 32.9345L9.51365 30.7383C11.6928 31.9485 14.2928 32.6604 17.0595 32.6604H17.0659C25.788 32.6572 32.8568 25.5852 32.8568 16.8631C32.8568 12.5037 31.0909 8.55758 28.236 5.69945L28.237 5.69839ZM17.0659 29.9925H17.0606C14.5966 29.9925 12.29 29.3125 10.3211 28.1299L10.3807 28.1628L9.90146 27.8791L4.93427 29.1828L6.25921 24.3389L5.94684 23.8427C4.68777 21.8643 3.93977 19.4535 3.93977 16.8674C3.93977 9.61902 9.81646 3.74233 17.0648 3.74233C24.3132 3.74233 30.1899 9.61902 30.1899 16.8674C30.1899 24.1158 24.3153 29.9925 17.0659 29.9925ZM24.2654 20.1633C23.8712 19.9656 21.9311 19.0126 21.5698 18.8798C21.2075 18.748 20.944 18.6832 20.6805 19.0785C20.4191 19.4726 19.6626 20.3609 19.4321 20.6244C19.2026 20.889 18.971 20.9208 18.5768 20.7243C17.3549 20.2291 16.3052 19.5693 15.3925 18.7565L15.4031 18.7661C14.5541 17.9798 13.8263 17.0799 13.2388 16.0875L13.209 16.0323C12.9795 15.6381 13.1846 15.4245 13.3811 15.228C13.5586 15.0516 13.7764 14.7668 13.973 14.5373C14.1281 14.3471 14.2609 14.1293 14.3618 13.8956L14.3682 13.8775C14.4139 13.7851 14.4405 13.6778 14.4405 13.563C14.4405 13.4238 14.4011 13.2942 14.3331 13.1837L14.3353 13.1869C14.2354 12.9893 13.447 11.047 13.1187 10.2565C12.7978 9.48727 12.4716 9.59245 12.2305 9.5797C12.001 9.56908 11.7375 9.56695 11.474 9.56695C11.0543 9.57758 10.6813 9.7667 10.4242 10.0589L10.4232 10.061C9.57102 10.8696 9.0419 12.0096 9.0419 13.273C9.0419 13.3006 9.0419 13.3293 9.04296 13.3569V13.3526C9.18215 14.9113 9.76652 16.3106 10.6654 17.4507L10.6526 17.4348C12.3569 19.9625 14.6285 21.9844 17.2943 23.3465L17.3942 23.3922C17.9765 23.6557 18.7223 23.9373 19.4852 24.1785L19.6435 24.222C20.1131 24.3708 20.654 24.4568 21.215 24.4568C21.5369 24.4568 21.8535 24.4281 22.1595 24.374L22.1266 24.3782C23.2624 24.1413 24.2048 23.456 24.7796 22.5199L24.7892 22.5018C24.9645 22.113 25.0665 21.6593 25.0665 21.1822C25.0665 20.9856 25.0495 20.7933 25.0166 20.6063L25.0198 20.6265C24.922 20.4618 24.6585 20.3641 24.2633 20.1654L24.2654 20.1633Z"
+              fill="white"/>
+      </svg>
+
       <span class="sr-only">Contactar por WhatsApp</span>
     </a>
 
