@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bastian Landskron — Portafolio</title>
+  <meta name="description" content="Portafolio personal minimalista: biografía, sobre mí, estudios, experiencia, proyectos y contacto." />
+
+  <!-- ✅ Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ✅ Google Fonts (Great Vibes, Gilda Display, Montserrat) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ✅ Estilos mínimos + microinteracciones -->
+  <style>
+    :root{
+      --bg: #ffffff;
+      --fg: #0b0b0f;
+      --muted: rgba(11,11,15,.62);
+      --card: rgba(11,11,15,.03);
+      --border: rgba(11,11,15,.08);
+      --shadow: 0 18px 45px rgba(0,0,0,.08);
+      --radius: 18px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--fg); }
+
+    /* “Glow” sutil en hover (minimal pero impactante) */
+    .hover-glow:hover{
+      box-shadow: var(--shadow);
+      transform: translateY(-4px);
+    }
+
+    /* Subrayado animado (nav) */
+    .link-underline{
+      position: relative;
+      display:inline-block;
+    }
+    .link-underline::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-6px;
+      height:1px;
+      width:0;
+      background: rgba(11,11,15,.75);
+      transition: width .25s ease;
+    }
+    .link-underline:hover::after{ width:100%; }
+
+    /* Botón “press” */
+    .press:active{ transform: translateY(1px) scale(.99); }
+
+    /* Chips */
+    .chip{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.65);
+      backdrop-filter: blur(10px);
+    }
+
+    /* Animación sutil de entrada */
+    .reveal{
+      opacity:0;
+      transform: translateY(14px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.is-visible{
+      opacity:1;
+      transform: translateY(0);
+    }
+
+    /* Tooltip simple */
+    .tooltip{
+      opacity:0;
+      transform: translateY(6px);
+      transition: opacity .2s ease, transform .2s ease;
+      pointer-events:none;
+    }
+    .tooltip-wrap:hover .tooltip{
+      opacity:1;
+      transform: translateY(0);
+    }
+  </style>
+
+  <!-- ✅ Tailwind config (fuentes) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            script: ["Great Vibes", "cursive"],
+            serif: ["Gilda Display", "serif"],
+            sans: ["Montserrat", "system-ui", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="font-sans">
+
+  <!-- =========================
+       HEADER / NAV
+  ========================== -->
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <div class="mx-auto max-w-6xl px-5">
+      <nav class="mt-4 rounded-2xl border" style="border-color: var(--border); background: rgba(255,255,255,.72); backdrop-filter: blur(14px);">
+        <div class="flex items-center justify-between px-5 py-4">
+          <!-- Logo / Nombre -->
+          <a href="#home" class="font-script text-3xl md:text-4xl leading-none hover:opacity-70 transition-opacity">
+            Bastian Landskron
+          </a>
+
+          <!-- Links -->
+          <div class="hidden md:flex items-center gap-10 text-xs tracking-[0.22em] uppercase">
+            <a class="text-black/60 hover:text-black transition-colors link-underline" href="#home">Home</a>
+            <a class="text-black/60 hover:text-black transition-colors link-underline" href="#sobre-mi">Sobre mí</a>
+            <a class="text-black/60 hover:text-black transition-colors link-underline" href="#estudios">Estudios</a>
+            <a class="text-black/60 hover:text-black transition-colors link-underline" href="#experiencia">Experiencia</a>
+            <a class="text-black/60 hover:text-black transition-colors link-underline" href="#proyectos">Proyectos</a>
+            <a class="text-black/60 hover:text-black transition-colors link-underline" href="#contacto">Contacto</a>
+          </div>
+
+          <!-- Mobile button -->
+          <button id="btnMenu" class="md:hidden press rounded-xl px-3 py-2 border text-sm"
+                  style="border-color: var(--border); background: rgba(11,11,15,.03);">
+            Menú
+          </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="md:hidden hidden border-t px-5 py-4"
+             style="border-color: var(--border);">
+          <div class="grid gap-3 text-xs tracking-[0.22em] uppercase">
+            <a class="text-black/70 hover:text-black transition-colors" href="#home">Home</a>
+            <a class="text-black/70 hover:text-black transition-colors" href="#sobre-mi">Sobre mí</a>
+            <a class="text-black/70 hover:text-black transition-colors" href="#estudios">Estudios</a>
+            <a class="text-black/70 hover:text-black transition-colors" href="#experiencia">Experiencia</a>
+            <a class="text-black/70 hover:text-black transition-colors" href="#proyectos">Proyectos</a>
+            <a class="text-black/70 hover:text-black transition-colors" href="#contacto">Contacto</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Spacer por header fijo -->
+  <div class="h-28 md:h-32"></div>
+
+  <main>
+
+    <!-- =========================
+         HERO / BIOGRAFÍA
+    ========================== -->
+    <section id="home" class="px-5 py-12 md:py-16">
+      <div class="mx-auto max-w-6xl">
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <!-- Texto -->
+          <div class="space-y-8 reveal">
+            <h1 class="font-script text-6xl md:text-7xl lg:text-8xl leading-tight">
+              Bastian Landskron
+            </h1>
+
+            <div class="space-y-4">
+              <h2 class="font-serif text-2xl md:text-3xl text-black/80">
+                Biografía
+              </h2>
+              <p class="text-[15px] md:text-[16px] leading-relaxed" style="color: var(--muted);">
+                Bastian Landskron es arquitecto de sistemas, investigador independiente y estratega digital enfocado en construir
+                tecnología con propósito. Fundador de Blandskron SpA, ha liderado iniciativas de software para organizaciones
+                de Latinoamérica y Europa, diseñando soluciones escalables que combinan arquitectura, seguridad y experiencia
+                de usuario.
+                <br><br>
+                Su trayectoria se caracteriza por un enfoque interdisciplinario: une ingeniería avanzada, educación tecnológica
+                y pensamiento analítico para desarrollar productos digitales, metodologías y prototipos de inteligencia artificial
+                orientados a impacto real y proyección futura. Su filosofía es simple: sistemas claros, decisiones medibles y
+                ejecución impecable.
+              </p>
+            </div>
+
+            <!-- Acciones -->
+            <div class="flex flex-wrap gap-3">
+              <a href="#contacto"
+                 class="press inline-flex items-center gap-2 rounded-full px-7 py-4 text-xs tracking-[0.22em] uppercase bg-black text-white hover:opacity-90 transition">
+                Contactar
+                <span aria-hidden="true" class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+              </a>
+
+              <!-- Botón CV -->
+              <a href="cv.pdf" download
+                 class="press inline-flex items-center gap-2 rounded-full px-7 py-4 text-xs tracking-[0.22em] uppercase border hover:bg-black hover:text-white transition"
+                 style="border-color: var(--border);">
+                Descargar CV
+              </a>
+            </div>
+
+            <!-- Chips -->
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="chip rounded-full px-4 py-2 text-xs" style="color: var(--muted);">Arquitectura</span>
+              <span class="chip rounded-full px-4 py-2 text-xs" style="color: var(--muted);">IA</span>
+              <span class="chip rounded-full px-4 py-2 text-xs" style="color: var(--muted);">DevOps</span>
+              <span class="chip rounded-full px-4 py-2 text-xs" style="color: var(--muted);">Ciberseguridad</span>
+              <span class="chip rounded-full px-4 py-2 text-xs" style="color: var(--muted);">Estrategia</span>
+            </div>
+
+            <!-- Mini stats (ficticias) -->
+            <div class="grid grid-cols-3 gap-3 pt-4">
+              <div class="rounded-2xl border p-4 text-center" style="border-color: var(--border); background: rgba(255,255,255,.6);">
+                <p class="text-xs tracking-[0.22em] uppercase" style="color: var(--muted);">Proyectos</p>
+                <p class="font-serif text-2xl">60+</p>
+              </div>
+              <div class="rounded-2xl border p-4 text-center" style="border-color: var(--border); background: rgba(255,255,255,.6);">
+                <p class="text-xs tracking-[0.22em] uppercase" style="color: var(--muted);">Países</p>
+                <p class="font-serif text-2xl">6</p>
+              </div>
+              <div class="rounded-2xl border p-4 text-center" style="border-color: var(--border); background: rgba(255,255,255,.6);">
+                <p class="text-xs tracking-[0.22em] uppercase" style="color: var(--muted);">Años</p>
+                <p class="font-serif text-2xl">10+</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto -->
+          <div class="flex justify-center md:justify-end reveal">
+            <div class="relative w-[300px] h-[300px] md:w-[360px] md:h-[360px] rounded-full overflow-hidden"
+                 style="box-shadow: var(--shadow); border: 1px solid var(--border);">
+              <img
+                src="https://images.unsplash.com/photo-1629507208649-70919ca33793?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+                alt="Foto de perfil"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+              <div class="pointer-events-none absolute inset-0"
+                   style="background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.45), transparent 55%);"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         SOBRE MÍ
+    ========================== -->
+    <section id="sobre-mi" class="px-5 py-16 md:py-24" style="background: linear-gradient(to bottom, #fff, rgba(11,11,15,.015));">
+      <div class="mx-auto max-w-4xl">
+        <div class="reveal">
+          <h2 class="font-serif text-4xl md:text-5xl text-center mb-10">
+            Sobre mí
+          </h2>
+
+          <div class="space-y-6 text-center text-[15px] md:text-[16px] leading-relaxed" style="color: var(--muted);">
+            <p>
+              Mi trabajo se basa en una idea: construir sistemas simples por fuera y poderosos por dentro.
+              Diseño arquitecturas que escalan sin perder claridad, con enfoque en seguridad, rendimiento y mantenibilidad.
+            </p>
+            <p>
+              He trabajado en productos SaaS, automatización empresarial y plataformas educativas. Me interesan especialmente
+              los sistemas distribuidos, la optimización algorítmica y la IA aplicada a procesos reales (no solo demos).
+            </p>
+            <p>
+              Fuera del desarrollo, dedico tiempo a investigación personal y documentación: creo guías, repositorios y laboratorios
+              para enseñar conceptos complejos con ejemplos prácticos. Me gusta transformar ideas abstractas en productos utilizables.
+            </p>
+          </div>
+
+          <!-- Valores (ficticios) -->
+          <div class="grid md:grid-cols-3 gap-6 mt-12">
+            <div class="rounded-2xl border p-7 text-center hover-glow transition-all duration-300" style="border-color: var(--border); background: var(--card);">
+              <p class="text-xs tracking-[0.22em] uppercase font-semibold mb-2">Principio</p>
+              <p class="font-serif text-xl mb-2">Claridad</p>
+              <p class="text-sm" style="color: var(--muted);">Arquitectura entendible, documentación precisa y decisiones trazables.</p>
+            </div>
+            <div class="rounded-2xl border p-7 text-center hover-glow transition-all duration-300" style="border-color: var(--border); background: var(--card);">
+              <p class="text-xs tracking-[0.22em] uppercase font-semibold mb-2">Principio</p>
+              <p class="font-serif text-xl mb-2">Impacto</p>
+              <p class="text-sm" style="color: var(--muted);">Sistemas que mejoran métricas reales: costos, tiempos y calidad.</p>
+            </div>
+            <div class="rounded-2xl border p-7 text-center hover-glow transition-all duration-300" style="border-color: var(--border); background: var(--card);">
+              <p class="text-xs tracking-[0.22em] uppercase font-semibold mb-2">Principio</p>
+              <p class="font-serif text-xl mb-2">Evolución</p>
+              <p class="text-sm" style="color: var(--muted);">Infraestructura y código preparados para crecer sin “rehacer todo”.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         ESTUDIOS
+    ========================== -->
+    <section id="estudios" class="px-5 py-16 md:py-24">
+      <div class="mx-auto max-w-6xl">
+        <div class="reveal">
+          <h2 class="font-serif text-4xl md:text-5xl text-center mb-12">
+            Estudios
+          </h2>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <article class="rounded-2xl p-8 border transition-all duration-300 hover-glow"
+                     style="border-color: var(--border); background: var(--card);">
+              <div class="flex justify-center mb-6">
+                <div class="rounded-full p-4 transition-all duration-300"
+                     style="background: rgba(11,11,15,.06);">
+                  🎓
+                </div>
+              </div>
+              <h3 class="font-serif text-xl text-center mb-2">Arquitectura de Sistemas</h3>
+              <p class="text-center text-sm mb-1" style="color: var(--muted);">Universidad Técnica de Innovación</p>
+              <p class="text-center text-xs tracking-[0.18em] uppercase mb-5">2015 - 2019</p>
+              <p class="text-sm text-center leading-relaxed" style="color: var(--muted);">
+                Investigación en sistemas distribuidos, tolerancia a fallos y diseño de arquitecturas resilientes.
+                Proyecto final: plataforma de microservicios con alta disponibilidad y auditoría de eventos.
+              </p>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="rounded-2xl p-8 border transition-all duration-300 hover-glow"
+                     style="border-color: var(--border); background: var(--card);">
+              <div class="flex justify-center mb-6">
+                <div class="rounded-full p-4" style="background: rgba(11,11,15,.06);">🧠</div>
+              </div>
+              <h3 class="font-serif text-xl text-center mb-2">Magíster en Ingeniería Digital</h3>
+              <p class="text-center text-sm mb-1" style="color: var(--muted);">Instituto Superior de Tecnología</p>
+              <p class="text-center text-xs tracking-[0.18em] uppercase mb-5">2019 - 2021</p>
+              <p class="text-sm text-center leading-relaxed" style="color: var(--muted);">
+                Enfoque en transformación digital, gestión de producto y gobierno de arquitectura.
+                Tesis ficticia: automatización inteligente para operaciones con KPIs y trazabilidad.
+              </p>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="rounded-2xl p-8 border transition-all duration-300 hover-glow"
+                     style="border-color: var(--border); background: var(--card);">
+              <div class="flex justify-center mb-6">
+                <div class="rounded-full p-4" style="background: rgba(11,11,15,.06);">☁️</div>
+              </div>
+              <h3 class="font-serif text-xl text-center mb-2">Certificación Cloud &amp; DevOps</h3>
+              <p class="text-center text-sm mb-1" style="color: var(--muted);">Cloud Academy Program</p>
+              <p class="text-center text-xs tracking-[0.18em] uppercase mb-5">2021</p>
+              <p class="text-sm text-center leading-relaxed" style="color: var(--muted);">
+                Infraestructura como código, CI/CD, observabilidad y despliegues multi-entorno.
+                Prácticas ficticias con entornos multi-región y políticas de seguridad.
+              </p>
+            </article>
+          </div>
+
+          <!-- Línea extra (ficticia) -->
+          <div class="mt-10 text-center text-sm" style="color: var(--muted);">
+            + Formación continua en arquitectura limpia, ciberseguridad aplicada y prototipado de IA.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         EXPERIENCIA
+    ========================== -->
+    <section id="experiencia" class="px-5 py-16 md:py-24" style="background: linear-gradient(to bottom, rgba(11,11,15,.015), #fff);">
+      <div class="mx-auto max-w-6xl">
+        <div class="reveal">
+          <h2 class="font-serif text-4xl md:text-5xl text-center mb-12">
+            Experiencia
+          </h2>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <article class="rounded-2xl p-8 border bg-white transition-all duration-300 hover-glow"
+                     style="border-color: var(--border);">
+              <div class="flex justify-center mb-6">
+                <div class="rounded-full p-4" style="background: rgba(11,11,15,.06);">💼</div>
+              </div>
+              <h3 class="font-serif text-xl text-center mb-2">Fundador &amp; CEO</h3>
+              <p class="text-center text-sm mb-1" style="color: var(--muted);">Blandskron SpA</p>
+              <p class="text-center text-xs tracking-[0.18em] uppercase mb-5">2020 - Presente</p>
+              <p class="text-sm text-center leading-relaxed" style="color: var(--muted);">
+                Dirección estratégica y arquitectura de soluciones para empresas tecnológicas.
+                Desarrollo de productos SaaS, laboratorios de ciberseguridad y automatización con IA.
+                Coordinación de equipos, stakeholders y entregas basadas en métricas.
+              </p>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="rounded-2xl p-8 border bg-white transition-all duration-300 hover-glow"
+                     style="border-color: var(--border);">
+              <div class="flex justify-center mb-6">
+                <div class="rounded-full p-4" style="background: rgba(11,11,15,.06);">🧩</div>
+              </div>
+              <h3 class="font-serif text-xl text-center mb-2">Arquitecto de Software Senior</h3>
+              <p class="text-center text-sm mb-1" style="color: var(--muted);">Tech Solutions Inc.</p>
+              <p class="text-center text-xs tracking-[0.18em] uppercase mb-5">2018 - 2020</p>
+              <p class="text-sm text-center leading-relaxed" style="color: var(--muted);">
+                Diseño e implementación de sistemas empresariales de misión crítica.
+                Optimización de rendimiento, integración de APIs y estandarización de prácticas internas.
+                Mentoría técnica y revisión de calidad (arquitectura, seguridad y mantenibilidad).
+              </p>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="rounded-2xl p-8 border bg-white transition-all duration-300 hover-glow"
+                     style="border-color: var(--border);">
+              <div class="flex justify-center mb-6">
+                <div class="rounded-full p-4" style="background: rgba(11,11,15,.06);">🧑‍💻</div>
+              </div>
+              <h3 class="font-serif text-xl text-center mb-2">Desarrollador Full Stack</h3>
+              <p class="text-center text-sm mb-1" style="color: var(--muted);">Digital Ventures</p>
+              <p class="text-center text-xs tracking-[0.18em] uppercase mb-5">2016 - 2018</p>
+              <p class="text-sm text-center leading-relaxed" style="color: var(--muted);">
+                Desarrollo web y móvil, implementación de APIs REST y automatización de procesos.
+                Participación en releases continuos, diseño de interfaces y mantenimiento de plataformas.
+              </p>
+            </article>
+          </div>
+
+          <!-- Logros ficticios -->
+          <div class="mt-12 grid md:grid-cols-3 gap-6">
+            <div class="rounded-2xl border p-7" style="border-color: var(--border); background: var(--card);">
+              <p class="text-xs tracking-[0.22em] uppercase font-semibold mb-2">Logro</p>
+              <p class="font-serif text-xl mb-2">Escalabilidad</p>
+              <p class="text-sm" style="color: var(--muted);">Migración ficticia a microservicios con reducción de incidentes operativos.</p>
+            </div>
+            <div class="rounded-2xl border p-7" style="border-color: var(--border); background: var(--card);">
+              <p class="text-xs tracking-[0.22em] uppercase font-semibold mb-2">Logro</p>
+              <p class="font-serif text-xl mb-2">Automatización</p>
+              <p class="text-sm" style="color: var(--muted);">Pipelines CI/CD con entregas más rápidas y validación automatizada.</p>
+            </div>
+            <div class="rounded-2xl border p-7" style="border-color: var(--border); background: var(--card);">
+              <p class="text-xs tracking-[0.22em] uppercase font-semibold mb-2">Logro</p>
+              <p class="font-serif text-xl mb-2">Seguridad</p>
+              <p class="text-sm" style="color: var(--muted);">Laboratorios y controles preventivos con enfoque en OWASP y auditoría.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         PROYECTOS (FICTICIOS)
+    ========================== -->
+    <section id="proyectos" class="px-5 py-16 md:py-24">
+      <div class="mx-auto max-w-6xl">
+        <div class="reveal">
+          <h2 class="font-serif text-4xl md:text-5xl text-center mb-12">
+            Proyectos Destacados
+          </h2>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <article class="rounded-2xl p-8 border transition-all duration-300 hover-glow"
+                     style="border-color: var(--border); background: var(--card);">
+              <div class="flex items-center justify-between mb-4">
+                <span class="chip rounded-full px-3 py-1 text-[11px]" style="color: var(--muted);">IA Experimental</span>
+                <span class="text-xs tracking-[0.18em] uppercase" style="color: var(--muted);">2024</span>
+              </div>
+              <h3 class="font-serif text-xl mb-3">Origen AI</h3>
+              <p class="text-sm leading-relaxed" style="color: var(--muted);">
+                Modelo ligero de lenguaje para investigación independiente. Enfoque en optimización simbólica,
+                compresión y respuestas coherentes sin infraestructura compleja.
+              </p>
+            </article>
+
+            <article class="rounded-2xl p-8 border transition-all duration-300 hover-glow"
+                     style="border-color: var(--border); background: var(--card);">
+              <div class="flex items-center justify-between mb-4">
+                <span class="chip rounded-full px-3 py-1 text-[11px]" style="color: var(--muted);">Ciberseguridad</span>
+                <span class="text-xs tracking-[0.18em] uppercase" style="color: var(--muted);">2025</span>
+              </div>
+              <h3 class="font-serif text-xl mb-3">DefensaPyme</h3>
+              <p class="text-sm leading-relaxed" style="color: var(--muted);">
+                Plataforma SaaS para análisis básico de vulnerabilidades y reportes ejecutivos para organizaciones.
+                Incluye laboratorios, registros y simulaciones controladas.
+              </p>
+            </article>
+
+            <article class="rounded-2xl p-8 border transition-all duration-300 hover-glow"
+                     style="border-color: var(--border); background: var(--card);">
+              <div class="flex items-center justify-between mb-4">
+                <span class="chip rounded-full px-3 py-1 text-[11px]" style="color: var(--muted);">ERP Modular</span>
+                <span class="text-xs tracking-[0.18em] uppercase" style="color: var(--muted);">2023</span>
+              </div>
+              <h3 class="font-serif text-xl mb-3">NovaPOS</h3>
+              <p class="text-sm leading-relaxed" style="color: var(--muted);">
+                Ecosistema de punto de venta modular con enfoque en integraciones, inventario, auditoría y multi-sucursal.
+                Arquitectura preparada para crecimiento por módulos.
+              </p>
+            </article>
+
+            <article class="rounded-2xl p-8 border transition-all duration-300 hover-glow"
+                     style="border-color: var(--border); background: var(--card);">
+              <div class="flex items-center justify-between mb-4">
+                <span class="chip rounded-full px-3 py-1 text-[11px]" style="color: var(--muted);">Educación</span>
+                <span class="text-xs tracking-[0.18em] uppercase" style="color: var(--muted);">2022</span>
+              </div>
+              <h3 class="font-serif text-xl mb-3">Loop STEAM</h3>
+              <p class="text-sm leading-relaxed" style="color: var(--muted);">
+                Plataforma de cursos y tutor IA para aprendizaje guiado. Contenido por rutas y ejercicios con feedback.
+                Diseñada para avanzar rápido sin perder fundamentos.
+              </p>
+            </article>
+
+            <article class="rounded-2xl p-8 border transition-all duration-300 hover-glow"
+                     style="border-color: var(--border); background: var(--card);">
+              <div class="flex items-center justify-between mb-4">
+                <span class="chip rounded-full px-3 py-1 text-[11px]" style="color: var(--muted);">Infra &amp; DevOps</span>
+                <span class="text-xs tracking-[0.18em] uppercase" style="color: var(--muted);">2021</span>
+              </div>
+              <h3 class="font-serif text-xl mb-3">ObservaStack</h3>
+              <p class="text-sm leading-relaxed" style="color: var(--muted);">
+                Stack de observabilidad ficticio para métricas, logs y alertas. Dashboards, trazabilidad y monitoreo
+                de servicios críticos.
+              </p>
+            </article>
+
+            <article class="rounded-2xl p-8 border transition-all duration-300 hover-glow"
+                     style="border-color: var(--border); background: var(--card);">
+              <div class="flex items-center justify-between mb-4">
+                <span class="chip rounded-full px-3 py-1 text-[11px]" style="color: var(--muted);">I+D</span>
+                <span class="text-xs tracking-[0.18em] uppercase" style="color: var(--muted);">2020</span>
+              </div>
+              <h3 class="font-serif text-xl mb-3">Atlas Framework</h3>
+              <p class="text-sm leading-relaxed" style="color: var(--muted);">
+                Conjunto de guías y plantillas para arquitectura limpia, consistencia de APIs, documentación y estándares
+                de calidad en equipos.
+              </p>
+            </article>
+          </div>
+
+          <p class="text-center mt-10 text-sm" style="color: var(--muted);">
+            *Todos los proyectos descritos aquí son ficticios y se presentan como ejemplo de portafolio.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         CONTACTO
+    ========================== -->
+    <section id="contacto" class="px-5 py-16 md:py-24">
+      <div class="mx-auto max-w-4xl">
+        <div class="reveal">
+          <h2 class="font-serif text-4xl md:text-5xl text-center mb-6">
+            Contacto
+          </h2>
+
+          <p class="text-center max-w-2xl mx-auto mb-12 text-[15px] md:text-[16px]" style="color: var(--muted);">
+            Estoy disponible para nuevos proyectos y colaboraciones. Si buscas claridad, ejecución y arquitectura sólida,
+            conversemos.
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <!-- Email -->
+            <div class="rounded-2xl p-8 border text-center transition-all duration-300 hover-glow"
+                 style="border-color: var(--border); background: var(--card);">
+              <div class="inline-flex justify-center mb-5">
+                <div class="rounded-full p-5 transition-all duration-300"
+                     style="background: rgba(11,11,15,.06);">
+                  ✉️
+                </div>
+              </div>
+              <p class="text-xs tracking-[0.22em] uppercase mb-2 font-semibold">Email</p>
+              <a class="text-sm hover:opacity-70 transition" href="mailto:contacto@ejemplo.com" style="color: var(--muted);">
+                contacto@ejemplo.com
+              </a>
+            </div>
+
+            <!-- Teléfono -->
+            <div class="rounded-2xl p-8 border text-center transition-all duration-300 hover-glow"
+                 style="border-color: var(--border); background: var(--card);">
+              <div class="inline-flex justify-center mb-5">
+                <div class="rounded-full p-5" style="background: rgba(11,11,15,.06);">📞</div>
+              </div>
+              <p class="text-xs tracking-[0.22em] uppercase mb-2 font-semibold">Teléfono</p>
+              <a class="text-sm hover:opacity-70 transition" href="tel:+56912345678" style="color: var(--muted);">
+                +56 9 1234 5678
+              </a>
+            </div>
+
+            <!-- Ubicación -->
+            <div class="rounded-2xl p-8 border text-center transition-all duration-300 hover-glow"
+                 style="border-color: var(--border); background: var(--card);">
+              <div class="inline-flex justify-center mb-5">
+                <div class="rounded-full p-5" style="background: rgba(11,11,15,.06);">📍</div>
+              </div>
+              <p class="text-xs tracking-[0.22em] uppercase mb-2 font-semibold">Ubicación</p>
+              <p class="text-sm" style="color: var(--muted);">Santiago, Chile</p>
+            </div>
+          </div>
+
+          <!-- CTA final (ficticio) -->
+          <div class="mt-10 text-center">
+            <a href="#home"
+               class="press inline-flex items-center gap-2 rounded-full px-7 py-4 text-xs tracking-[0.22em] uppercase border hover:bg-black hover:text-white transition"
+               style="border-color: var(--border);">
+              Volver arriba
+              <span aria-hidden="true">↑</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="mt-10">
+    <div class="bg-black text-white">
+      <div class="mx-auto max-w-6xl px-5 py-14">
+        <div class="grid md:grid-cols-3 gap-10 mb-10">
+          <!-- Col 1 -->
+          <div>
+            <h3 class="font-script text-4xl mb-4">Bastian Landskron</h3>
+            <p class="text-sm text-white/60 leading-relaxed">
+              Arquitectura, inteligencia artificial y estrategia digital.
+              Diseño sistemas que escalan, automatizan y transforman.
+            </p>
+          </div>
+
+          <!-- Col 2 -->
+          <div>
+            <h4 class="font-serif text-xl mb-4">Enlaces</h4>
+            <ul class="space-y-2 text-sm text-white/60">
+              <li><a class="hover:text-white transition" href="#home">Home</a></li>
+              <li><a class="hover:text-white transition" href="#sobre-mi">Sobre mí</a></li>
+              <li><a class="hover:text-white transition" href="#estudios">Estudios</a></li>
+              <li><a class="hover:text-white transition" href="#experiencia">Experiencia</a></li>
+              <li><a class="hover:text-white transition" href="#proyectos">Proyectos</a></li>
+              <li><a class="hover:text-white transition" href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3 -->
+          <div>
+            <h4 class="font-serif text-xl mb-4">Sígueme</h4>
+            <div class="flex gap-3">
+              <a class="press rounded-full px-4 py-3 bg-white/10 hover:bg-white hover:text-black transition"
+                 href="https://linkedin.com" target="_blank" rel="noopener noreferrer">in</a>
+              <a class="press rounded-full px-4 py-3 bg-white/10 hover:bg-white hover:text-black transition"
+                 href="https://github.com" target="_blank" rel="noopener noreferrer">gh</a>
+              <a class="press rounded-full px-4 py-3 bg-white/10 hover:bg-white hover:text-black transition"
+                 href="https://twitter.com" target="_blank" rel="noopener noreferrer">x</a>
+            </div>
+
+            <p class="mt-4 text-xs text-white/40 leading-relaxed">
+              *Contenido ficticio para demostración / regalo.
+            </p>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 pt-6 text-center text-sm text-white/60">
+          <span id="year"></span> © Bastian Landskron. Hecho con ♥
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================
+       WHATSAPP FLOATING BUTTON
+  ========================== -->
+  <div class="fixed bottom-6 right-6 z-50 tooltip-wrap">
+    <a id="waBtn"
+       href="#"
+       class="press inline-flex items-center justify-center w-14 h-14 rounded-full shadow-2xl"
+       style="background:#25D366;">
+      <span class="text-white text-2xl" aria-hidden="true">💬</span>
+      <span class="sr-only">Contactar por WhatsApp</span>
+    </a>
+
+    <div class="tooltip absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-black text-white text-xs px-3 py-2 rounded-lg whitespace-nowrap">
+      Escríbeme por WhatsApp
+    </div>
+  </div>
+
+  <!-- =========================
+       JS (microinteracciones)
+       - menú móvil
+       - reveal on scroll
+       - whatsapp link
+       - año automático
+  ========================== -->
+  <script>
+    // ====== CONFIG RÁPIDA (edita esto y listo) ======
+    const DATA = {
+      whatsappNumber: "+56912345678",
+      whatsappMessage: "Hola! Me gustaría conversar contigo."
+    };
+
+    // Menu móvil
+    const btnMenu = document.getElementById("btnMenu");
+    const mobileMenu = document.getElementById("mobileMenu");
+    if (btnMenu && mobileMenu) {
+      btnMenu.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // cerrar al hacer click en un link
+      mobileMenu.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+      });
+    }
+
+    // WhatsApp
+    const waBtn = document.getElementById("waBtn");
+    const formattedPhone = (DATA.whatsappNumber || "").replace(/\s+/g, "").replace(/\+/g, "");
+    const encodedMsg = encodeURIComponent(DATA.whatsappMessage || "");
+    if (waBtn) waBtn.href = `https://wa.me/${formattedPhone}?text=${encodedMsg}`;
+
+    // Año
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll(".reveal");
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add("is-visible");
+      });
+    }, { threshold: 0.12 });
+
+    reveals.forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
